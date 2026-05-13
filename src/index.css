@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: #1a1a1a;
+    color: #e8e8e1;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    user-select: none;
+  }
+
+  /* 스크롤바 스타일 */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #444;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  /* input 기본 스타일 */
+  input, textarea {
+    user-select: text;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover active:bg-accent-active text-white font-medium
+           px-4 py-2 rounded-lg transition-colors duration-150 disabled:opacity-40
+           disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-accent/50;
+  }
+
+  .btn-secondary {
+    @apply bg-surface-overlay hover:bg-border text-text-primary font-medium
+           px-4 py-2 rounded-lg transition-colors duration-150 disabled:opacity-40
+           disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-border;
+  }
+
+  .input-field {
+    @apply w-full bg-surface-overlay border border-border text-text-primary
+           placeholder-text-muted rounded-lg px-3 py-2.5 text-sm
+           focus:outline-none focus:ring-2 focus:ring-accent/50 focus:border-accent
+           transition-colors duration-150;
+  }
+
+  .card {
+    @apply bg-surface-raised border border-border rounded-xl p-4;
+  }
+
+  /* 타이틀바 드래그 영역 */
+  .titlebar-drag {
+    -webkit-app-region: drag;
+  }
+
+  .titlebar-no-drag {
+    -webkit-app-region: no-drag;
+  }
+}
