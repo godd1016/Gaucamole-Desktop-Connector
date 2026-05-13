@@ -28,6 +28,14 @@ npm run dist
 ```
 `release/` 폴더에 NSIS 설치 파일이 생성됩니다.
 
+### 타 PC에서 다운 및 사용방법
+```powershell
+git clone https://github.com/[계정명]/GuacDesktop.git
+cd GuacDesktop
+npm install
+npm run dev
+```
+
 ## 사용 방법
 
 1. 앱 실행 후 과콰몰리 서버 URL 입력
