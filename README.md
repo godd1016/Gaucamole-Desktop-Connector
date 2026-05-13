@@ -30,7 +30,7 @@ npm run dist
 
 ### 타 PC에서 다운 및 사용방법
 ```powershell
-git clone https://github.com/[계정명]/GuacDesktop.git
+git clone https://github.com/godd1016/Gaucamole-Desktop-Connector.git
 cd GuacDesktop
 npm install
 npm run dev
